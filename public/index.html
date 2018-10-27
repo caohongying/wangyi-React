@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="theme-color" content="#000000">
     <!--
       manifest.json provides metadata used when your web app is added to the
@@ -19,7 +20,29 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>网易严选</title>
+
+    <link rel="stylesheet" href="../src/common/css/reset.css">
+
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_882396_eam2k3hpbh.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/moment.js/2.22.1/moment.min.js"></script>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+      (function(){
+        var width = document.documentElement.clientWidth;
+        var styleNode = document.createElement('style');
+        styleNode.innerHTML = 'html{font-size: '+ width/10 +'px !important;}';
+        document.head.appendChild(styleNode);
+      })();
+    </script>
   </head>
   <body>
     <noscript>
