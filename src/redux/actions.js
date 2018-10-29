@@ -9,17 +9,17 @@ export function getHomeData() {
   return async dispatch=>{
 
     const result=await reqHomeData();
-    console.log(result.data);
     if(result.code===0){
       dispatch(receiveHomeData(result.data))
     }
   }
 }
-export function getOptimizeData() {
+export function getOptimizeData(cb) {
   return async dispatch=>{
     const result=await reqOptimizeData();
     if(result.code===0){
       dispatch(receiveOptimizeData(result.data))
+      cb&&cb()
     }
   }
 }
